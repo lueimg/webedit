@@ -146,7 +146,7 @@
         <script src="{{ asset('js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
 <script>
 function go(obj){
-	window.location = "http://localhost:8080/TAP/tap/public/noticia/"+obj.id;
+	window.location = "noticia/"+obj.id;
 }
 	$(function() {
           CKEDITOR.replace('descripcion');

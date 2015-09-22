@@ -36,7 +36,7 @@
         <!-- Tipo articulos -->
           <div class="col-sm-3 pad-fix">
             <div class="dark-container">
-               <header class="titulo"><a href="http://localhost:8080/TAP/tap/public/tienda" class="white">Tienda</a></header>
+               <header class="titulo"><a href="tienda" class="white">Tienda</a></header>
               <div class="wrapper">
                 @foreach($tipoarticulos as $tarticulo)
                   <div class="well">
@@ -55,14 +55,14 @@
               <!-- <header class="titulo">$noticia->titulo <small>$noticia->fecha</small></header>  -->
               <div class="wrapper">
                   <div class="titulo">{{$categoria->descripcion}}
-                    <small><a href="http://localhost:8080/TAP/tap/public/tienda">Regresar a Tienda</a></small>
+                    <small><a href="tienda">Regresar a Tienda</a></small>
                   </div>
                   <br>
 
                   @foreach($productos as $producto)
-                    <a href="http://localhost:8080/TAP/tap/public/tienda/{{$producto->codArticulo}}" class="articulo">
+                    <a href="tienda/{{$producto->codArticulo}}" class="articulo">
                       <div class="articuloImg">
-                        <img src="http://localhost:8080/TAP/tap/public/uploads/{{$producto->Imagen[0]->imagen_archivo}}" alt="">
+                        <img src="uploads/{{$producto->Imagen[0]->imagen_archivo}}" alt="">
                       </div>
                       <h4>{{$producto->nombArticulo}}</h4>
                       <h4><strong>${{$producto->precio}}</strong></h4>

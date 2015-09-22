@@ -36,7 +36,7 @@ header small{
               <div class="wrapper">
                 @foreach($noticias as $noticia)
                   <div class="well">
-                    <a href="http://localhost:8080/TAP/tap/public/noticias/{{$noticia->codNoticia}}"><strong>{{$noticia->titulo}}</strong></a><br><small style="font-size: 13px;color:#646464;"> {{$noticia->fecha}}</small>
+                    <a href="noticias/{{$noticia->codNoticia}}"><strong>{{$noticia->titulo}}</strong></a><br><small style="font-size: 13px;color:#646464;"> {{$noticia->fecha}}</small>
                     <p style="max-height: 70px;overflow:hidden;">{{$noticia->breveDescripcion}}</p>
                   </div>
                 @endforeach

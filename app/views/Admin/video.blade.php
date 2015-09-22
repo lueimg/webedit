@@ -85,7 +85,7 @@
         <script src="{{ asset('js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
 <script>
 function go(obj){
-	window.location = "http://localhost:8080/TAP/tap/public/video/"+obj.id;
+	window.location = "video/"+obj.id;
 }
 	$(function() {
         $('#example2').dataTable({

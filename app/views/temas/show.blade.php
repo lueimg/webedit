@@ -35,9 +35,9 @@
 	                  <div class="col-sm-3" style="text-align: center;">
 		                  <div class="thumbnail">
 		                  	  @if ($tema->User->Imagen)
-		                  	  	<img style="max-width: 200px;"src="http://localhost:8080/TAP/tap/public/uploads/{{$tema->User->Imagen->imagen_archivo}}" alt="...">
+		                  	  	<img style="max-width: 200px;"src="uploads/{{$tema->User->Imagen->imagen_archivo}}" alt="...">
 		                  	  @else
-						      <img style="max-width: 200px;"src="http://localhost:8080/TAP/tap/public/images/buddy.png" alt="...">
+						      <img style="max-width: 200px;"src="images/buddy.png" alt="...">
 		                  	  @endif
 						      <div class="caption" style="color:#B7B9AC">
 						        <h4>{{$tema->User->username}}</h4>
@@ -64,9 +64,9 @@
 		                  	<br>
 
 						      @if ($reply->User->Imagen)
-		                  	  	<img style="max-width: 200px;"src="http://localhost:8080/TAP/tap/public/uploads/{{$reply->User->Imagen->imagen_archivo}}" alt="...">
+		                  	  	<img style="max-width: 200px;"src="uploads/{{$reply->User->Imagen->imagen_archivo}}" alt="...">
 		                  	  @else
-						      <img style="max-width: 200px;"src="http://localhost:8080/TAP/tap/public/images/buddy.png" alt="...">
+						      <img style="max-width: 200px;"src="images/buddy.png" alt="...">
 		                  	  @endif
 
 						      <div class="caption" style="color:#B7B9AC">
@@ -100,7 +100,7 @@
                   </div>
                   <br>
                    @if(Session::has('usuario'))
-	                <form action="http://localhost:8080/TAP/tap/public/reply" method="post">
+	                <form action="reply" method="post">
 	                	<input type="hidden" value="{{$tema->codTema}}" name="codTema">
 					   	<textarea name="descripcion" id="descripcion" rows="10" cols="80"></textarea>
 					   	<br>

@@ -41,7 +41,7 @@
       <div class="row pad-fix">
         <div class="dark-container header">
           <div class="col-sm-4 col-md-4 col-lg-4">
-            <a href="http://localhost:8080/TAP/tap/public/" class="logo">
+            <a href="" class="logo">
               <img src="{{ asset('assets/img/logoDL.png') }}" class="logo" alt="Daniel Lazo">
             </a>  
           </div>
@@ -49,10 +49,10 @@
             <div class="navegador">
                <ul>
                  <li><a href="#">NOTICIAS</a></li>
-                 <li><a href="http://localhost:8080/TAP/tap/public/foro">FORO</a></li>
-                 <li><a href="http://localhost:8080/TAP/tap/public/videos">VIDEOS</a></li>
-                 <li><a href="http://localhost:8080/TAP/tap/public/galerias">IMAGENES</a></li>
-                 <li><a href="http://localhost:8080/TAP/tap/public/tienda">TIENDA</a></li>
+                 <li><a href="foro">FORO</a></li>
+                 <li><a href="videos">VIDEOS</a></li>
+                 <li><a href="galerias">IMAGENES</a></li>
+                 <li><a href="tienda">TIENDA</a></li>
                   @if(Session::has('usuario'))
                   <li style="position: absolute;right: 0;top: 0;text-align: right;">
                     <span style="color:#fff">
@@ -61,7 +61,7 @@
                     </span>
                     
                   </li>
-                  <li><a href="http://localhost:8080/TAP/tap/public/perfil/{{Session::get('usuario')}}">PERFIL</a></li>
+                  <li><a href="perfil/{{Session::get('usuario')}}">PERFIL</a></li>
                   @else
                   <li><a id="ingresa" href="#" data-toggle="modal" data-target="#loginModal">INGRESA</a></li>
                   @endif
@@ -178,7 +178,7 @@ data-config="{'skin':'skins/black/skin.css','volume':90,'autoplay':true,'shuffle
         <script type="text/javascript" language="javascript">
           function exist(obj){
             $.ajax({
-              url: 'http://localhost:8080/TAP/tap/public/exist',
+              url: 'exist',
               type: 'get',
               data: {username: obj.value},
             })
@@ -204,19 +204,19 @@ data-config="{'skin':'skins/black/skin.css','volume':90,'autoplay':true,'shuffle
             else {obj.parentNode.className="form-group has-success"}
           }
           function cerrarsesion(){
-            document.location = "http://localhost:8080/TAP/tap/public/cerrarsesion";
+            document.location = "cerrarsesion";
           }
           function login(){
             var a = document.getElementById('userlogin').value,
             b = document.getElementById('passlogin').value;
             $.ajax({
-              url: 'http://localhost:8080/TAP/tap/public/loginfan',
+              url: 'loginfan',
               type: 'post',
               data: {username: a,password: b},
             })
             .done(function(data) {
               if(data=='true'){
-                document.location = "http://localhost:8080/TAP/tap/public/";
+                document.location = "";
               }else{
                 alert("El usuario o contraseña es incorrecto");
               }

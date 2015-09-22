@@ -66,18 +66,20 @@
 
             	{{ Form::open(array('method' => 'PATCH', 'route'=>['establecimiento.update', $establecimiento->codEstablecimiento])) }}
                                     
+                <label for="">Nombre:</label>
                 {{ Form::text('nombEstablecimiento', $establecimiento->nombEstablecimiento, array('placeholder'=>'Nombre Establecimiento','class' => 'form-control','id'=>'nombEstablecimiento','required')) }}<br>
-
+                <label for="">Dirección:</label>
                 {{ Form::text('direccion', $establecimiento->direccion, array('placeholder'=>'Dirección','class' => 'form-control','id'=>'direccion','required')) }}<br>
-                 <label for="">Ingresa la ciudad</label>
+                <label for="">Ingresa la ciudad</label>
                 <input id="pac-input" class="controls" type="text" placeholder="Ubicación exacta">
                 <div id="map-canvas"></div>
                 <br>
+                <label for="">Descripción:</label>
                 {{ Form::text('descripcion', $establecimiento->descripcion, array('placeholder'=>'Descripción','class' => 'form-control','id'=>'descripcion','required','maxlength'=>150)) }}<br>
-
+                <label for="">Capacidad:</label>
                 {{ Form::text('capacidadAsistencia', $establecimiento->capacidadAsistencia, array('placeholder'=>'Capacidad de Asistencia','class' => 'form-control','id'=>'capacidadAsistencia','required','maxlength'=>7)) }}<br>
 
-
+        <label for="">Distrito:</label>
 				<select name="codDistrito" id="codDistrito" class="form-control">
 					@foreach ($distritos as $distrito)
 					@if ($establecimiento->codDistrito == $distrito->codDistrito)

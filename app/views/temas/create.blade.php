@@ -15,7 +15,7 @@
                     Crear Nuevo Tema
                   </div>
                   <br>
-                  <form action="http://localhost:8080/TAP/tap/public/temanuevo" method="post">
+                  <form action="temanuevo" method="post">
                     <h3>Titulo:</h3>
                     <input type="text" class="form-control" name="titulo">
                     <br>

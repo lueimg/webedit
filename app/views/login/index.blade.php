@@ -15,7 +15,7 @@
 <body>
 
 
-<form action="http://localhost:8080/TAP/tap/public/administrador" method="post">
+<form action="administrador" method="post">
   <h1>Log in</h1>
   <div class="inset">
   <p>

@@ -75,62 +75,62 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/video">
+                            <a href="video">
                                 <i class="fa fa-youtube-play"></i> <span>Videos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/contrato">
+                            <a href="contrato">
                                 <i class="fa fa-file"></i> <span>Contratos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/evento">
+                            <a href="evento">
                                 <i class="fa fa-ticket"></i> <span>Eventos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/noticia">
+                            <a href="noticia">
                                 <i class="fa fa-newspaper-o"></i> <span>Noticias</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/cancion">
+                            <a href="cancion">
                                 <i class="fa fa-music"></i> <span>Canciones</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/usuario">
+                            <a href="usuario">
                                 <i class="fa fa-users"></i> <span>Usuarios</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/agenda">
+                            <a href="agenda">
                                 <i class="fa fa-calendar"></i> <span>Agenda</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/merchandising">
+                            <a href="merchandising">
                                 <i class="fa fa-shopping-cart"></i> <span>Merchandising</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/imagen">
+                            <a href="imagen">
                                 <i class="fa fa-picture-o"></i> <span>Imagenes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/cliente">
+                            <a href="cliente">
                                 <i class="fa fa-suitcase"></i> <span>Clientes</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/establecimiento">
+                            <a href="establecimiento">
                                 <i class="fa fa-building"></i> <span>Establecimientos</span>
                             </a>
                         </li>
                         <li>
-                            <a href="http://localhost:8080/TAP/tap/public/mailing">
+                            <a href="mailing">
                                 <i class="fa fa-envelope"></i> <span>Mailing</span>
                             </a>
                         </li>

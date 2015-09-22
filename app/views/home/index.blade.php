@@ -34,7 +34,7 @@
                 <ul>
                     @foreach($imagenes as $imagen)
                       <li><a href="#block">
-                      <img class="block" src="http://localhost:8080/TAP/tap/public/uploads/{{$imagen->imagen_archivo}}" alt="">
+                      <img class="block" src="uploads/{{$imagen->imagen_archivo}}" alt="">
                       </a></li>
                     @endforeach
              <!--      <li><a href="#cube"><img src="assets/img/001.jpg" class="cube" /></a></li>
@@ -108,7 +108,7 @@
                   <strong>{{$noticia->titulo}}</strong>
                   <p>
                     {{$noticia->breveDescripcion}}
-                  <a href="http://localhost:8080/TAP/tap/public/noticias/{{$noticia->codNoticia}}">Leer más</a></p>
+                  <a href="noticias/{{$noticia->codNoticia}}">Leer más</a></p>
                 </div>
                 @endforeach
 

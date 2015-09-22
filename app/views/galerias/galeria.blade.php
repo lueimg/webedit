@@ -9,7 +9,7 @@
             @foreach ($galerias as $galeria)
 				@if (!in_array(substr($galeria->fecha, 0, 4), $c))
 	            <?php $c[] = substr($galeria->fecha, 0, 4); ?>
-	            <li><a href="http://localhost:8080/TAP/tap/public/galerias/fecha/{{substr($galeria->fecha, 0, 4)}}">{{substr($galeria->fecha, 0, 4)}}</a></li>
+	            <li><a href="galerias/fecha/{{substr($galeria->fecha, 0, 4)}}">{{substr($galeria->fecha, 0, 4)}}</a></li>
 	            @else
 					
 				@endif
@@ -27,20 +27,20 @@
            @foreach ($galerias as $galeria)
            <li>
              <div class="thumb">
-               <a href="http://localhost:8080/TAP/tap/public/galerias/{{$galeria->codGaleria}}">
+               <a href="galerias/{{$galeria->codGaleria}}">
                	@if (count($galeria->Imagen)>3)
 	               	<?php $i = 0; ?>
 	               	@foreach ($galeria->Imagen as $img)
-		                 <img src="http://localhost:8080/TAP/tap/public/uploads/{{$img->imagen_archivo}}" class='album-preview' alt="">
+		                 <img src="uploads/{{$img->imagen_archivo}}" class='album-preview' alt="">
 		                 <?php $i++; ?>
 	               	@endforeach
                	@else
-               		 <img src="http://localhost:8080/TAP/tap/public/uploads/{{$galeria->Imagen[0]->imagen_archivo}}" class='img-responsive' alt="">
+               		 <img src="uploads/{{$galeria->Imagen[0]->imagen_archivo}}" class='img-responsive' alt="">
                	@endif
                </a>
              </div>
              <h4 style="text-align: center">
-               <a href="http://localhost:8080/TAP/tap/public/galerias/{{$galeria->codGaleria}}">
+               <a href="galerias/{{$galeria->codGaleria}}">
                  {{$galeria->nombGaleria}}
                </a>
              </h4>
@@ -54,20 +54,20 @@
 		           @foreach ($gale as $galeria)
 		           <li>
 		             <div class="thumb">
-		               <a href="http://localhost:8080/TAP/tap/public/galerias/{{$galeria->codGaleria}}">
+		               <a href="galerias/{{$galeria->codGaleria}}">
 		               	@if (count($galeria->Imagen)>3)
 			               	<?php $i = 0; ?>
 			               	@foreach ($galeria->Imagen as $img)
-				                 <img src="http://localhost:8080/TAP/tap/public/uploads/{{$img->imagen_archivo}}" class='album-preview' alt="">
+				                 <img src="uploads/{{$img->imagen_archivo}}" class='album-preview' alt="">
 				                 <?php $i++; ?>
 			               	@endforeach
 		               	@else
-		               		 <img src="http://localhost:8080/TAP/tap/public/uploads/{{$galeria->Imagen[0]->imagen_archivo}}" class='img-responsive' alt="">
+		               		 <img src="uploads/{{$galeria->Imagen[0]->imagen_archivo}}" class='img-responsive' alt="">
 		               	@endif
 		               </a>
 		             </div>
 		             <h4 style="text-align: center">
-		               <a href="http://localhost:8080/TAP/tap/public/galerias/{{$galeria->codGaleria}}">
+		               <a href="galerias/{{$galeria->codGaleria}}">
 		                 {{$galeria->nombGaleria}}
 		               </a>
 		             </h4>

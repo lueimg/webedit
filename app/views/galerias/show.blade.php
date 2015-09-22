@@ -21,7 +21,7 @@
             @foreach ($galerias as $gal)
 				@if (!in_array(substr($gal->fecha, 0, 4), $c))
 	            <?php $c[] = substr($gal->fecha, 0, 4); ?>
-	            <li><a href="http://localhost:8080/TAP/tap/public/galerias/fecha/{{substr($gal->fecha, 0, 4)}}">{{substr($gal->fecha, 0, 4)}}</a></li>
+	            <li><a href="galerias/fecha/{{substr($gal->fecha, 0, 4)}}">{{substr($gal->fecha, 0, 4)}}</a></li>
 	            @else
 					
 				@endif
@@ -41,8 +41,8 @@
 	               	@foreach ($galeria->Imagen as $img)
            <li>
              <div class="thumb">
-               <a href="http://localhost:8080/TAP/tap/public/galerias/{{$galeria->codGaleria}}">
-		           <img src="http://localhost:8080/TAP/tap/public/uploads/{{$img->imagen_archivo}}" class='img-responsive mg' alt="">
+               <a href="galerias/{{$galeria->codGaleria}}">
+		           <img src="uploads/{{$img->imagen_archivo}}" class='img-responsive mg' alt="">
                </a>
              </div>
              <h4 style="text-align: center">

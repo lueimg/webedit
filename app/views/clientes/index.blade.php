@@ -118,7 +118,7 @@
         <script src="{{ asset('js/plugins/input-mask/jquery.inputmask.extensions.js') }}" type="text/javascript"></script>
 <script>
 function go(obj){
-	window.location = "http://localhost:8080/TAP/tap/public/cliente/"+obj.id;
+	window.location = "cliente/"+obj.id;
 }
 	$(function() {
         $("#telefono").inputmask("999999999", {"placeholder": ""});

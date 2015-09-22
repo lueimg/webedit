@@ -55,7 +55,7 @@
                                     <td>{{$evento->horaEvento}}</td>
                                     <td style="text-align:center">
                                         @if($evento->tipoevento_id == 1)
-                                        <a href="http://localhost:8080/TAP/tap/public/contrato" class="btn btn-success"><i class="fa fa-plus"></i> Contrato</a>
+                                        <a href="contrato" class="btn btn-success"><i class="fa fa-plus"></i> Contrato</a>
                                         @endif
                                     </td>
 									<td style="text-align:center"><a href="evento/{{$evento->codEvento}}/edit" class="btn btn-info"><i class="fa fa-pencil"></i></a></td>
@@ -140,7 +140,7 @@
 <script>
     
 function go(obj){
-	window.location = "http://localhost:8080/TAP/tap/public/evento/"+obj.id;
+	window.location = "evento/"+obj.id;
 }
 function activar(i,a){
   $.post('activarevento', {id:i,activo:a}, function(data, textStatus, xhr) {

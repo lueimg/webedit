@@ -63,7 +63,7 @@
         <script src="{{ asset('js/bootstrap-multiselect.js') }}" type="text/javascript"></script>
 <script>
 function go(obj){
-	window.location = "http://localhost:8080/TAP/tap/public/contrato/"+obj.id;
+	window.location = "contrato/"+obj.id;
 }
 	$(function() {
         $('#example2').dataTable({

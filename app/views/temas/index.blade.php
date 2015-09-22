@@ -50,7 +50,7 @@
                                 {{-- expr --}}
                             <tr>
                                 <td style="min-width: 400px"> 
-                                    <a href="http://localhost:8080/TAP/tap/public/foro/{{$tema->codTema}}">{{$tema->titulo}}</a>
+                                    <a href="foro/{{$tema->codTema}}">{{$tema->titulo}}</a>
                                     <br>
                                     {{$tema->User->username}}
                                 </td>

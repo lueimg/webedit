@@ -40,11 +40,11 @@
         <!-- Tipo articulos -->
           <div class="col-sm-3 pad-fix">
             <div class="dark-container">
-              <header class="titulo"><a href="http://localhost:8080/TAP/tap/public/tienda" class="white">Tienda</a></header>
+              <header class="titulo"><a href="tienda" class="white">Tienda</a></header>
               <div class="wrapper">
                 @foreach($tipoarticulos as $tarticulo)
                   <div class="well">
-                    <a href="http://localhost:8080/TAP/tap/public/tienda/categoria/{{$tarticulo->codTipoArticulo}}">
+                    <a href="tienda/categoria/{{$tarticulo->codTipoArticulo}}">
                       {{$tarticulo->descripcion}} ({{count($tarticulo->Articulo)}})
                     </a>
                   </div>
@@ -57,12 +57,12 @@
           <div class="col-sm-9 pad-fix">
             <div class="dark-container">
               <header class="titulo">{{$producto->nombArticulo}} <small></small>
-                  <small><a href="http://localhost:8080/TAP/tap/public/tienda">Regresar a Tienda</a></small>
+                  <small><a href="tienda">Regresar a Tienda</a></small>
               </header> 
               <div class="wrapper">
                 <div class="producto row">
                   <div class="col-sm-5">
-                    <img src="http://localhost:8080/TAP/tap/public/uploads/{{$producto->Imagen[0]->imagen_archivo}}" alt="">
+                    <img src="uploads/{{$producto->Imagen[0]->imagen_archivo}}" alt="">
                   </div>
                   <div class="col-sm-7">
                     <p>{{$producto->descripcion}}</p>

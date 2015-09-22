@@ -172,7 +172,7 @@
     
         function a(id){
              $.ajax({
-                        url: 'http://localhost:8080/TAP/tap/public/getEvento',
+                        url: 'getEvento',
                         type: 'get',
                         data: {id:id}
                     })

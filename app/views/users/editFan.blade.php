@@ -19,7 +19,7 @@
                     Actualizar Perfil
                   </div>
                   <br>
-                  <form action="http://localhost:8080/TAP/tap/public/perfil/editar" method="post" enctype="multipart/form-data">
+                  <form action="perfil/editar" method="post" enctype="multipart/form-data">
                   <dl class="dl-horizontal">
                     <dt>Usuario:</dt>
                     <dd><input type="text" name="username" value="{{$user[0]->username}}"></dd>
@@ -65,7 +65,7 @@
                   
                   @if ($user[0]->Imagen)
                     <dt>Avatar:</dt>
-                    <dd><img style="max-width: 200px;" class="img-thumbnail" src="http://localhost:8080/TAP/tap/public/uploads/{{$user[0]->Imagen->imagen_archivo}}" alt=""></dd>
+                    <dd><img style="max-width: 200px;" class="img-thumbnail" src="uploads/{{$user[0]->Imagen->imagen_archivo}}" alt=""></dd>
                     <dt></dt><dd><input type="file" name="file">  </dd> 
                   @else
                   <dt>Avatar:</dt>

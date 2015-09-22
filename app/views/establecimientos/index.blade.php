@@ -224,7 +224,7 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function go(obj){
-    window.location = "http://localhost:8080/TAP/tap/public/establecimiento/"+obj.id;
+    window.location = "establecimiento/"+obj.id;
 }
 		$(function() {
         $('#example2').dataTable({

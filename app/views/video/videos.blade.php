@@ -45,7 +45,7 @@
               <!-- <header class="titulo">$noticia->titulo <small>$noticia->fecha</small></header>  -->
               <div class="wrapper">
                   <div class="titulo">Videos
-                    <small><a href="http://localhost:8080/TAP/tap/public/">Regresar</a></small>
+                    <small><a href="">Regresar</a></small>
                   </div>
                   <br>
 
