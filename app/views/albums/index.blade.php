@@ -1,0 +1,1 @@
+C:\wamp\www\TAP\tap\app/views/albums/index.blade.php

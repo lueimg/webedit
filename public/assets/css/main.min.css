@@ -1,0 +1,14 @@
+html,body{width:100%;height:100%;padding:0;margin:0}body{background:url("../img/background/oasis.jpg") fixed repeat 50% 50% / 100% auto transparent;font-family:OpenSans;-webkit-transition:all .8s;-moz-transition:all .8s;-ms-transition:all .8s;-o-transition:all .8s;transition:all .8s}
+.header{overflow:hidden}.navegador{width:100%}.navegador ul{margin:0;padding:0}.navegador ul li{text-align:center;list-style:none}.navegador a{text-decoration:none;color:#fff;font-size:18px;font-family:Bebas}
+.dark-container{width:100%;background:rgba(0,0,0,0.9);padding:20px 20px}.wrapper{font-family:OpenSans;font-size:18px;color:#c8c8c8}.titulo{width:100%;height:50px;color:#fff;font-family:Bebas;font-size:40px!important;letter-spacing:1px;margin-bottom:10px;border-bottom:1px solid #fff}
+.pad-fix{padding-left:5px!important;padding-right:5px!important}.logo{display:block;width:270px;height:auto;margin:0 auto}ul.year-list{float:left;margin:0}
+ul.year-list li{list-style:none;padding:5px 10px;font-size:18px;background:rgba(80,80,80,0.4);border-bottom:1px solid}ul.albumes,ul.articulos{float:left}
+ul.albumes li{float:left;margin:0 22px 10px 0;height:auto;width:142px;list-style:none;padding:0;min-height:226px}ul.articulos li{height:auto;list-style:none;min-height:226px}
+ul.albumes li h4,ul.articulos li h4{margin-top:10px;font-family:Bebas,helvetica,sans-serif;text-transform:uppercase;clear:both;padding-top:10px}ul.albumes li h4 a,ul.articulos li h4 a{color:#FFF}
+ul.albumes li h4 a:hover,ul.articulos li h4 a:hover{color:#888;text-decoration:none}.thumb a{width:142px;height:142px;border:1px solid #888;float:left}
+.thumb a:hover{border:1px solid #fff}.thumb a img{float:left;margin:0;padding:0;border:0}img.album-preview{width:70px;height:70px}img.articulo{width:140px;height:140px}
+h3.categoria{border-bottom:1px solid #888;color:#b4b4bd}@media(min-width:768px){.box_skitter img{width:600px;height:216px}.navegador ul{margin-top:50px;margin-left:20px}
+.navegador li{float:left;padding:5px;height:60px}.navegador li a{display:block;height:60px;-webkit-transition:all .6s;-moz-transition:all .6s;-ms-transition:all .6s;-o-transition:all .6s;transition:all .6s}
+.navegador li a:hover{color:#787878;background:url("../img/musique.gif") 0 0 no-repeat;background-size:100% 50px}}@media(min-width:992px){.navegador li a{font-size:25px}
+}@font-face{font-family:Bebas;src:url('../fonts/BebasNeue.otf')}@font-face{font-family:OpenSans;src:url('../fonts/OpenSans-CondLight.ttf')}
+@font-face{font-family:riesling;src:url('../fonts/riesling.ttf')}
