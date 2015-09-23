@@ -88,11 +88,11 @@
                     @endforeach
                 </select><br>
                 <label for="codEvento">Evento:</label>
-                <select name="codEvento" id="codEvento" class="form-control">
+                <select name="codEvento" id="codEvento" class="form-control" onchange="registraFH(this.value)">
                     <option value="">---------Selecciona un Evento---------</option>
                     @foreach ($itemss as $evento)
                         @if($evento->tipoevento_id == 1)
-                            <option value="{{$evento->codEvento}}">{{$evento->nombEvento}}</option>
+                            <option data-fh="{{$evento->fechaEvento}}|{{$evento->horaEvento}}" id="{{$evento->codEvento}}" value="{{$evento->codEvento}}">{{$evento->nombEvento}}</option>
                         @endif
                     @endforeach
                 </select><br>
@@ -110,10 +110,10 @@
                 {{ Form::select('codCancion[]', $canci,null, array('multiple'=>true,'class'=>'multiselect')) }}
                <br><br>
                 <label for="fechaPresentacion">Fecha de la presentación:</label>
-                {{ Form::text('fechaPresentacion', Input::old('fechaPresentacion'), array('placeholder'=>'Fecha de la Presentacion','class' => 'form-control','id'=>'fechaPresentacion','required', "maxlength"=>10)) }}<br>
+                {{ Form::text('fechaPresentacion', Input::old('fechaPresentacion'), array('placeholder'=>'Fecha de la Presentacion','class' => 'form-control','id'=>'fechaPresentacion','required', "maxlength"=>10,'readonly')) }}<br>
                 <label for="horaPresentacion">Hora de la presentación:</label>
-                <div class="bootstrap-timepicker">
-                    {{ Form::text('horaPresentacion', Input::old('horaPresentacion'), array('placeholder'=>'Hora de la Presentacion','class' => 'form-control timepicker','id'=>'horaPresentacion','required')) }}
+                <div >
+                    {{ Form::text('horaPresentacion', Input::old('horaPresentacion'), array('placeholder'=>'Hora de la Presentacion','class' => 'form-control','id'=>'horaPresentacion','required','readonly')) }}
                 </div>
                 <br>
                 <label for="cantDias">Cantidad de Días:</label>
@@ -210,15 +210,18 @@ function go(obj){
         return confirm('¿Está seguro de esta acción?');
     });
 
-                $("#fechaPresentacion").datepicker({
-                format: 'mm/dd/yyyy',
-                startDate: '-3d'
-            })
+                
         $('.multiselect').multiselect({
             buttonWidth: '100%',
             includeSelectAllOption: true,
             enableFiltering: true
         })
     });
+
+    registraFH=function(val){
+        var fh=$("#"+val).attr("data-fh");
+        $("#fechaPresentacion").val(fh.split("|")[0]);
+        $("#horaPresentacion").val(fh.split("|")[1]);
+    }
 </script>
 @stop

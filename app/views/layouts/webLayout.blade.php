@@ -36,6 +36,8 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
+    <?php $url=explode("/",$_SERVER['PHP_SELF']);
+    ?>
     <body>
         <header class="container ">
       <div class="row pad-fix">
@@ -49,10 +51,10 @@
             <div class="navegador">
                <ul>
                  <li><a href="#">NOTICIAS</a></li>
-                 <li><a href="foro">FORO</a></li>
-                 <li><a href="videos">VIDEOS</a></li>
-                 <li><a href="galerias">IMAGENES</a></li>
-                 <li><a href="tienda">TIENDA</a></li>
+                 <li><a href="http://localhost/<?php echo $url[1]; ?>/public/foro">FORO</a></li>
+                 <li><a href="http://localhost/<?php echo $url[1]; ?>/public/videos">VIDEOS</a></li>
+                 <li><a href="http://localhost/<?php echo $url[1]; ?>/public/galerias">IMAGENES</a></li>
+                 <li><a href="http://localhost/<?php echo $url[1]; ?>/public/tienda">TIENDA</a></li>
                   @if(Session::has('usuario'))
                   <li style="position: absolute;right: 0;top: 0;text-align: right;">
                     <span style="color:#fff">
@@ -87,7 +89,7 @@
       <div class="modal-body" style="height: 290px;">
         <div class="form col-md-12 center-block">
           
-          <form action="registrar" method="post" id="registro">
+          <form action="http://localhost/<?php echo $url[1]; ?>/public/registrar" method="post" id="registro">
             <p>Registrate y podrás subir imagenes, compartirlas, comentarlas, escuchar lo ultimo y más...</p>
             <div class="form-group">
               <input type="email" id="em" name="username" class="form-control input-lg" style="border-radius: 0;" placeholder="Email" name="email" required onblur="exist(this)"><p style="color:red" class="hidden">Este nombre de usuario ya existe.</p>
@@ -178,7 +180,7 @@ data-config="{'skin':'skins/black/skin.css','volume':90,'autoplay':true,'shuffle
         <script type="text/javascript" language="javascript">
           function exist(obj){
             $.ajax({
-              url: 'exist',
+              url: 'http://localhost/<?php echo $url[1]; ?>/public/exist',
               type: 'get',
               data: {username: obj.value},
             })
@@ -204,19 +206,19 @@ data-config="{'skin':'skins/black/skin.css','volume':90,'autoplay':true,'shuffle
             else {obj.parentNode.className="form-group has-success"}
           }
           function cerrarsesion(){
-            document.location = "cerrarsesion";
+            document.location = "http://localhost/<?php echo $url[1]; ?>/public/cerrarsesion";
           }
           function login(){
             var a = document.getElementById('userlogin').value,
             b = document.getElementById('passlogin').value;
             $.ajax({
-              url: 'loginfan',
+              url: 'http://localhost/<?php echo $url[1]; ?>/public/loginfan',
               type: 'post',
               data: {username: a,password: b},
             })
             .done(function(data) {
               if(data=='true'){
-                document.location = "";
+                document.location="http://localhost/<?php echo $url[1]; ?>/public/";
               }else{
                 alert("El usuario o contraseña es incorrecto");
               }

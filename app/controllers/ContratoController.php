@@ -102,11 +102,11 @@ class ContratoController extends \BaseController {
 		    // $pdf = new \Thujohn\Pdf\Pdf();
 		    // $content = $pdf->load()->output(); ,compact('contratos')
 		    
+		$usuario= User::find(Auth::user()->id);
 
 
 
-
-		    $html = View::make('layouts.documento',compact('contrato'));
+		    $html = View::make('layouts.documento',compact('contrato','usuario'));
 
 		     // 
 		    return PDF::load($html, 'A4', 'portrait')->show();

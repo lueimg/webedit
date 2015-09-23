@@ -56,18 +56,6 @@
                       </div>
                       <h4><strong>{{$video->nombVideo}}</strong></h4>
                     </div>
-                    <div class="video-wrapper">
-                       <div class="articuloImg" style="width:320px;">
-                         <iframe id="ytplayer" type="text/html" style="width:100%;height: 210px"src="https://www.youtube.com/embed/{{$video->link}}?version=3&autoplay=0&autohide=1&color=white&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <h4><strong>{{$video->nombVideo}}</strong></h4>
-                    </div>
-                      <div class="video-wrapper">
-                       <div class="articuloImg" style="width:320px;">
-                         <iframe id="ytplayer" type="text/html" style="width:100%;height: 210px"src="https://www.youtube.com/embed/{{$video->link}}?version=3&autoplay=0&autohide=1&color=white&modestbranding=1" frameborder="0" allowfullscreen></iframe>
-                      </div>
-                      <h4><strong>{{$video->nombVideo}}</strong></h4>
-                    </div>
                   @endforeach
               </div>
             </div>

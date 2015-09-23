@@ -34,7 +34,7 @@
 		<br>
 
 <p>
-	Conste por el presente documento el contrato art&iacute;stico que celebran por una parte: <b style="font-size:18px">{{$contrato->Cliente->razonSocial}}</b>	representado por <b style="font-size:18px">{{$contrato->Cliente->representante}}</b> con DNI <b style="font-size:18px">{{$contrato->Cliente->dniRepresentante}}</b> domiciliado en <b style="font-size:18px">{{$contrato->Cliente->direccion}}</b> a quien se le denomina CONTRATANTE y de la otra EL ARTISTA DANIEL LAZO, representado por <b style="font-size:18px">FALTA DEFINIR</b> con DNI <b style="font-size:18px">FALTA DEFINIR</b>, domiciliado en <b style="font-size:18px">FALTA DEFINIR</b> a quien se le denomina REPRESENTANTE-Daniel Lazo bajo los t&eacute;rminos y condiciones siguientes:
+	Conste por el presente documento el contrato art&iacute;stico que celebran por una parte: <b style="font-size:18px">{{$contrato->Cliente->razonSocial}}</b>	representado por <b style="font-size:18px">{{$contrato->Cliente->representante}}</b> con DNI <b style="font-size:18px">{{$contrato->Cliente->dniRepresentante}}</b> domiciliado en <b style="font-size:18px">{{$contrato->Cliente->direccion}}</b> a quien se le denomina CONTRATANTE y de la otra EL ARTISTA DANIEL LAZO, representado por <b style="font-size:18px">{{$usuario->nombre.' '.$usuario->apellidoP.' '.$usuario->apellidoM}}</b> con DNI <b style="font-size:18px">{{$usuario->docIdentidad}}</b>, domiciliado en <b style="font-size:18px">{{$usuario->direccion}}</b> a quien se le denomina REPRESENTANTE-Daniel Lazo bajo los t&eacute;rminos y condiciones siguientes:
 </p>
 
 

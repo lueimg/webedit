@@ -33,7 +33,7 @@
                     Foro
                   </div>
                   <br>
-                  @if (Session::has('usuario'))
+                  @if (Session::has('usuario') and Auth::user()->id==1)
                     <a href="foro/tema" class="btn btn-success btn-lg"><i class="glyphicon glyphicon-plus"></i> Nuevo Tema</a>
                   @endif
                     <table id="example2" class="table table-bordered table-hover">

@@ -39,12 +39,12 @@
 	                        @endif
 	                    @endforeach
 	                </select><br>
-					<select name="codEvento" id="codEvento" class="form-control">
+					<select name="codEvento" id="codEvento" class="form-control" onchange="registraFH(this.value)">
 	                    @foreach ($itemss as $evento)
 	                    	@if($contratos->codEvento == $evento->codEvento)
-	                        	<option value="{{$evento->codEvento}}" selected>{{$evento->nombEvento}}</option>
+	                        	<option data-fh="{{$evento->fechaEvento}}|{{$evento->horaEvento}}" id="{{$evento->codEvento}}" value="{{$evento->codEvento}}" selected>{{$evento->nombEvento}}</option>
 	                        @else
-								<option value="{{$evento->codEvento}}">{{$evento->nombEvento}}</option>
+								<option data-fh="{{$evento->fechaEvento}}|{{$evento->horaEvento}}" id="{{$evento->codEvento}}" value="{{$evento->codEvento}}">{{$evento->nombEvento}}</option>
 	                        @endif
 	                    @endforeach
                 	</select><br>
@@ -64,9 +64,9 @@
 	                {{ Form::select('codCancion[]', $canci, $cancix, array('multiple'=>true,'class'=>'multiselect')) }}
 	               	<br><br>
 
-	    			<input type="text" name="fechaPresentacion" class="form-control" value="{{$contratos->fechaPresentacion}}" id="fechaPresentacion"><br>
+	    			<input type="text" name="fechaPresentacion" class="form-control" value="{{$contratos->fechaPresentacion}}" id="fechaPresentacion" readonly><br>
  <div class="bootstrap-timepicker">
-	    			<input type="text" name="horaPresentacion" class="form-control" value="{{$contratos->horaPresentacion}}" id="horaPresentacion">
+	    			<input type="text" name="horaPresentacion" class="form-control" value="{{$contratos->horaPresentacion}}" id="horaPresentacion" readonly>
                     </div>
                     <br>        
 	    			
@@ -101,18 +101,18 @@ function go(obj){
         $('form').on('submit', function(){
             return confirm('¿Está seguro de esta acción?');
         });
-        $("#fechaPresentacion").inputmask("yyyy-mm-dd", {"placeholder": "yyyy-mm-dd"});
     });
-     $("#horaPresentacion").timepicker({
-            showInputs: false,
-            disableFocus: true,
-            showMeridian: false
-        });
 
     $('.multiselect').multiselect({
         buttonWidth: '100%',
         includeSelectAllOption: true,
         enableFiltering: true
     })
+
+    registraFH=function(val){
+        var fh=$("#"+val).attr("data-fh");
+        $("#fechaPresentacion").val(fh.split("|")[0]);
+        $("#horaPresentacion").val(fh.split("|")[1]);
+    }
 </script>
 @stop

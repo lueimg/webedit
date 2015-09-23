@@ -128,6 +128,9 @@
 
 @section("scripts")
     <!-- DATA TABES SCRIPT -->
+        <script>
+            var GValidaArriba=1;
+        </script>
         <script src="{{ asset('js/plugins/datatables/jquery.dataTables.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/plugins/datatables/dataTables.bootstrap.js') }}" type="text/javascript"></script>
          <!-- InputMask -->
@@ -136,7 +139,7 @@
         <script src="{{ asset('js/plugins/input-mask/jquery.inputmask.extensions.js') }}" type="text/javascript"></script>
         <script src="{{ asset('js/plugins/timepicker/bootstrap-timepicker.min.js') }}" type="text/javascript"></script>
         <!-- DATE PICKER -->
-        <script src="{{ asset('js/bootstrap-datepicker.js') }}" type="text/javascript"></script>
+        <script src="{{ asset('js/bootstrap-datepickerf.js') }}" type="text/javascript"></script>
 <script>
     
 function go(obj){
@@ -147,9 +150,10 @@ function activar(i,a){
   });
 }
     $(function() {
+    var today = new Date();
      $("#fechaEvento").datepicker({
         format: 'dd/mm/yyyy',
-        starDate: '-3d'
+        startDate: new Date(today.getFullYear(), today.getMonth(), today.getDate())
     });
 
 
