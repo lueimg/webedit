@@ -105,7 +105,13 @@ Route::post('imagen/subirfan', 'ImagenController@subirfan');
 Route::resource('video', 'VideoController');
 Route::get('videos', 'VideoController@videos');
 
+// VIDEO
+Route::get('bibliografia', function(){
+	return View::make('bibliografia.bibliografia');
+});
+
 // EVENTO
+Route::controller('eventoajax', 'EventoController');
 Route::resource('evento', 'EventoController');
 Route::post('activarevento','EventoController@activarEvento');
 

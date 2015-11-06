@@ -96,7 +96,7 @@
                                         </a>
                                 </div>
                                 <h4>{{$articulo->nombArticulo}}</h4>
-                                <h4><strong>{{$articulo->precio}}</strong></h4>
+                                <h4><strong>$ {{$articulo->precio}}</strong></h4>
                                 <div style="padding:4px 0px 10px 0;">
                                     <a href="merchandising/{{$articulo->codArticulo}}/edit" class="btn btn-info"><i class="fa fa-pencil"></i></a>
 

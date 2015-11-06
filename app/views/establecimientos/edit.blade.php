@@ -24,7 +24,6 @@
         outline: none;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
       }
-
       #pac-input {
         background-color: #fff;
         padding: 0 11px 0 13px;
@@ -40,6 +39,10 @@
         margin-left: -1px;
         padding-left: 14px;  /* Regular padding-left + 1. */
         width: 401px;
+      }
+
+      .pac-container {
+        font-family: Roboto;
       }
 
       .pac-container {

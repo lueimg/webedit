@@ -50,7 +50,8 @@
           <div class="col-sm-8 col-md-8 col-lg-8">
             <div class="navegador">
                <ul>
-                 <li><a href="#">NOTICIAS</a></li>
+                 <li><a href="http://localhost/<?php echo $url[1]; ?>/public/bibliografia">BIBLIOGRAFIA</a></li>
+                 <li><a href="http://localhost/<?php echo $url[1]; ?>/public/noticias/1">NOTICIAS</a></li>
                  <li><a href="http://localhost/<?php echo $url[1]; ?>/public/foro">FORO</a></li>
                  <li><a href="http://localhost/<?php echo $url[1]; ?>/public/videos">VIDEOS</a></li>
                  <li><a href="http://localhost/<?php echo $url[1]; ?>/public/galerias">IMAGENES</a></li>

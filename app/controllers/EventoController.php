@@ -20,6 +20,22 @@ class EventoController extends \BaseController {
 		}
 	}
 
+	public function postEventodetalle(){
+
+		if ( Request::ajax() ) {
+
+		$sql="	SELECT e.codEvento,e.nombEvento,e.descripcion,e.fechaEvento,e.horaEvento,
+				es.descripcion est,es.direccion,es.latitud,es.longitud,d.nombDistrito
+				from evento e
+				inner join establecimiento es on es.codEstablecimiento=e.establecimiento_id
+				inner join distrito d ON d.codDistrito=es.codDistrito
+				where e.codEvento='".Input::get('evento')."'";
+		$r=DB::select($sql);
+
+		return Response::json(array('rst'=>1,'datos'=>$r[0]));
+		}
+	}
+
 
 	/**
 	 * Show the form for creating a new resource.
