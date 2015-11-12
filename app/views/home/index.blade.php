@@ -42,10 +42,15 @@
             <div class="dark-container">
               <div class="box_skitter box_skitter_large">
                 <ul>
+                <?php
+                $class=array('cube','cubeRandom','block','cubeStop');
+                $posicion=0;
+                ?>
                     @foreach($imagenes as $imagen)
-                      <li><a href="#block">
-                      <img class="block" src="uploads/{{$imagen->imagen_archivo}}" alt="">
+                      <li><a href="#{{$class[$posicion]}}">
+                      <img src="uploads/{{$imagen->imagen_archivo}}" alt="">
                       </a></li>
+                    {{$posicion++}}
                     @endforeach
              <!--      <li><a href="#cube"><img src="assets/img/001.jpg" class="cube" /></a></li>
                   <li><a href="#cubeRandom"><img src="assets/img/002.jpg" class="cubeRandom" /></a></li>
